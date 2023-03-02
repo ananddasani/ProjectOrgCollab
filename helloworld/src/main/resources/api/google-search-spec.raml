@@ -1,0 +1,36 @@
+#%RAML 1.0
+title: Google Search Spec
+
+/search:
+  get:
+    queryParameters:
+      keyword:
+        description: this is the keyword will be searched
+        type: string
+        minLength: 3
+        maxLength: 10
+
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include Example Responses/googleSearch.raml
+
+/news:
+  post:
+    queryParameters:
+      countryNews:
+        description: searching with query params and body too
+        required: false
+
+    body:
+      application/json:
+        type: !include Schemas/news_gooleSearchClone.raml
+    
+    responses:
+      201:
+        body:
+          application/json:
+            example: {"indin news " : "..............."}
+        
+
