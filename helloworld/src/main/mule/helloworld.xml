@@ -10,7 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="helloworldFlow" doc:id="71289554-ad8d-4e9a-adce-8c47789ba6af" >
 		<http:listener doc:name="Listener" doc:id="74fbec71-f759-4c88-b8d3-a8fa0f80c23e" config-ref="HTTP_Listener_config" path="/test"/>
 		<set-payload value='"Hello World"' doc:name="Set Payload" doc:id="980eccfd-8b72-4b47-95d0-0e3ffcb88a4d" />
-		<logger level="INFO" doc:name="Logger" doc:id="32f6e3e6-5258-4024-b95a-9fa9912fa333" message="Sync Testing"/>
 	</flow>
 	<flow name="helloworldFlow1" doc:id="803ee0e1-1a21-4dbc-af00-37995f04cebd" >
 		<http:listener doc:name="Listener" doc:id="717eb0a7-98cf-4a46-91a3-5bb80bfdf4bb" config-ref="HTTP_Listener_config" path="/anand"/>
